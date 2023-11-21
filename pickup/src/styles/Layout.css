@@ -1,8 +1,9 @@
 nav {
   height: 100vh;
-  background-color: #253240;
+  background-color: #151F27;
   width: 20vw;
   border-right: thin solid #A0A0A0;
+  position: fixed;
 }
 
 nav ul {
@@ -66,4 +67,9 @@ nav li img {
   height: 20px;
   width: auto;
   margin-right: 10px;
+}
+
+.take-up-space {
+  height: 100%;
+  width: 20vw;
 }

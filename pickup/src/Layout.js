@@ -1,4 +1,4 @@
-import { Outlet, Link, NavLink } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import "./styles/Layout.css"
 import Bell from "./images/icons/Bell.png"
 import Home from "./images/icons/Home.png"
@@ -8,6 +8,7 @@ import Question from "./images/icons/Question.png"
 const Layout = () => {
   return (
     <>
+      <div class="take-up-space"></div>
       <nav>
         <div class="top-section">
           <h1>PickUp</h1>

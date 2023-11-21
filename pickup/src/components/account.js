@@ -1,10 +1,23 @@
+import {Link} from "react-router-dom"
+import "../styles/home.css"
+import Search from "../images/icons/Search.png"
+import Example_Profile from "../images/Example_Profile.jpg"
 import "../styles/account.css"
 
 const Account = () => {
   return (
     <>
       <main class="account-page">
-        <h1>Account</h1>
+        <div class="search-name">
+          <div class="search-wrapper">
+            <img src={Search} alt=""/>
+            <input type="text" placeholder="Search User Posts..." class="search" />
+          </div>
+          <div class="name">
+            <Link to="/account"><h3>Stacy Coolidge</h3></Link>
+            <img src={Example_Profile} alt=""/>
+          </div>
+        </div>
       </main>
     </>
   );
