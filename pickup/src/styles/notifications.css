@@ -1,0 +1,26 @@
+.notifications-page {
+  width: 70%;
+  padding: 4vh 6vw 0 6vw;
+}
+
+#expand {
+  display:none;  
+}
+
+#expand + .smalldesc {
+  max-height:52px;
+  overflow:hidden;
+  transition:all .3s ease;
+}
+
+#expand:checked + .smalldesc {
+  max-height:250px;  
+}
+
+label {
+  cursor:pointer;
+}
+
+label:hover {
+  text-decoration:none;  
+}
