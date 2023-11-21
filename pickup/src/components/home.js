@@ -2,6 +2,7 @@ import {Link} from "react-router-dom"
 import "../styles/home.css"
 import Search from "../images/icons/Search.png"
 import Example_Profile from "../images/Example_Profile.jpg"
+import { post_data } from "../data"
 
 const Home = () => {
   return (
@@ -58,161 +59,39 @@ const Home = () => {
           </div>
         </section>
         <section class="user-feed">
-          <div class="post">
-            <div class="at-a-glance">
-              <input type="checkbox" class="expand" id="expand"/>
-              <div class="user-info">
-                <img src={Example_Profile} alt=""/>
-                <div>
-                  <p class="post-title">Stacy's Basketball Game</p>
-                  <p class="experience-level"><i>Intermediate Basketball</i></p>
+          {post_data.map((user_post) => (
+            <div class="post">
+              <div class="at-a-glance">
+                <input type="checkbox" class="expand" id="expand"/>
+                <div class="user-info">
+                  <img src={Example_Profile} alt=""/>
+                  <div>
+                    <p class="post-title">{user_post.title}</p>
+                    <p class="experience-level"><i>{user_post.skill_level} {user_post.activity}</i></p>
+                  </div>
+                </div>
+                <div class="registration-info">
+                  <p><b>{user_post.spots_left}</b> of <b>{user_post.spots_needed}</b><br />Spots Left</p>
+                </div>
+                <div class="event-info">
+                  <p>{user_post.month} {user_post.day}</p>
+                  <p>4:30 PM - 6:00 PM</p>
+                  <p>Gym 3rd Floor, Court A</p>
+                </div>
+                <label for="expand"></label>
+              </div>
+              <div class="description-registration">
+                <div class="post-description">Come play basketball with my friends and I! We're kinda competitive but not too competitive haha</div>
+                <div class="expanded-registration-info-container">
+                  <button type="submit" class="registration-button">
+                    I'll Be There!
+                  </button>
+                  <p><b>3</b> of <b>5</b><br />Spots Left</p>
                 </div>
               </div>
-              <div class="registration-info">
-                <p><b>3</b> of <b>5</b><br />Spots Left</p>
-              </div>
-              <div class="event-info">
-                <p>November 10th</p>
-                <p>4:30 PM - 6:00 PM</p>
-                <p>Gym 3rd Floor, Court A</p>
-              </div>
-              <label for="expand"></label>
+              <div class="hosted-by"><i>Hosted by Stacy Coolidge</i></div>
             </div>
-            <div class="description-registration">
-              <div class="post-description">Come play basketball with my friends and I! We're kinda competitive but not too competitive haha</div>
-              <div class="expanded-registration-info-container">
-                <button type="submit" class="registration-button">
-                  I'll Be There!
-                </button>
-                <p><b>3</b> of <b>5</b><br />Spots Left</p>
-              </div>
-            </div>
-            <div class="hosted-by"><i>Hosted by Stacy Coolidge</i></div>
-          </div>
-          <div class="post">
-            <div class="at-a-glance">
-              <input type="checkbox" class="expand" id="expand"/>
-              <div class="user-info">
-                <img src={Example_Profile} alt=""/>
-                <div>
-                  <p class="post-title">Stacy's Basketball Game</p>
-                  <p class="experience-level"><i>Intermediate Basketball</i></p>
-                </div>
-              </div>
-              <div class="registration-info">
-                <p><b>3</b> of <b>5</b><br />Spots Left</p>
-              </div>
-              <div class="event-info">
-                <p>November 10th</p>
-                <p>4:30 PM - 6:00 PM</p>
-                <p>Gym 3rd Floor, Court A</p>
-              </div>
-              <label for="expand"></label>
-            </div>
-            <div class="description-registration">
-              <div class="post-description">Come play basketball with my friends and I! We're kinda competitive but not too competitive haha</div>
-              <div class="expanded-registration-info-container">
-                <button type="submit" class="registration-button">
-                  I'll Be There!
-                </button>
-                <p><b>3</b> of <b>5</b><br />Spots Left</p>
-              </div>
-            </div>
-            <div class="hosted-by"><i>Hosted by Stacy Coolidge</i></div>
-          </div>
-          <div class="post">
-            <div class="at-a-glance">
-              <input type="checkbox" class="expand" id="expand"/>
-              <div class="user-info">
-                <img src={Example_Profile} alt=""/>
-                <div>
-                  <p class="post-title">Stacy's Basketball Game</p>
-                  <p class="experience-level"><i>Intermediate Basketball</i></p>
-                </div>
-              </div>
-              <div class="registration-info">
-                <p><b>3</b> of <b>5</b><br />Spots Left</p>
-              </div>
-              <div class="event-info">
-                <p>November 10th</p>
-                <p>4:30 PM - 6:00 PM</p>
-                <p>Gym 3rd Floor, Court A</p>
-              </div>
-              <label for="expand"></label>
-            </div>
-            <div class="description-registration">
-              <div class="post-description">Come play basketball with my friends and I! We're kinda competitive but not too competitive haha</div>
-              <div class="expanded-registration-info-container">
-                <button type="submit" class="registration-button">
-                  I'll Be There!
-                </button>
-                <p><b>3</b> of <b>5</b><br />Spots Left</p>
-              </div>
-            </div>
-            <div class="hosted-by"><i>Hosted by Stacy Coolidge</i></div>
-          </div>
-          <div class="post">
-            <div class="at-a-glance">
-              <input type="checkbox" class="expand" id="expand"/>
-              <div class="user-info">
-                <img src={Example_Profile} alt=""/>
-                <div>
-                  <p class="post-title">Stacy's Basketball Game</p>
-                  <p class="experience-level"><i>Intermediate Basketball</i></p>
-                </div>
-              </div>
-              <div class="registration-info">
-                <p><b>3</b> of <b>5</b><br />Spots Left</p>
-              </div>
-              <div class="event-info">
-                <p>November 10th</p>
-                <p>4:30 PM - 6:00 PM</p>
-                <p>Gym 3rd Floor, Court A</p>
-              </div>
-              <label for="expand"></label>
-            </div>
-            <div class="description-registration">
-              <div class="post-description">Come play basketball with my friends and I! We're kinda competitive but not too competitive haha</div>
-              <div class="expanded-registration-info-container">
-                <button type="submit" class="registration-button">
-                  I'll Be There!
-                </button>
-                <p><b>3</b> of <b>5</b><br />Spots Left</p>
-              </div>
-            </div>
-            <div class="hosted-by"><i>Hosted by Stacy Coolidge</i></div>
-          </div>
-          <div class="post">
-            <div class="at-a-glance">
-              <input type="checkbox" class="expand" id="expand"/>
-              <div class="user-info">
-                <img src={Example_Profile} alt=""/>
-                <div>
-                  <p class="post-title">Stacy's Basketball Game</p>
-                  <p class="experience-level"><i>Intermediate Basketball</i></p>
-                </div>
-              </div>
-              <div class="registration-info">
-                <p><b>3</b> of <b>5</b><br />Spots Left</p>
-              </div>
-              <div class="event-info">
-                <p>November 10th</p>
-                <p>4:30 PM - 6:00 PM</p>
-                <p>Gym 3rd Floor, Court A</p>
-              </div>
-              <label for="expand"></label>
-            </div>
-            <div class="description-registration">
-              <div class="post-description">Come play basketball with my friends and I! We're kinda competitive but not too competitive haha</div>
-              <div class="expanded-registration-info-container">
-                <button type="submit" class="registration-button">
-                  I'll Be There!
-                </button>
-                <p><b>3</b> of <b>5</b><br />Spots Left</p>
-              </div>
-            </div>
-            <div class="hosted-by"><i>Hosted by Stacy Coolidge</i></div>
-          </div>
+          ))}
         </section>
       </main>
     </>
